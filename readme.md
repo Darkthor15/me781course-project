@@ -39,12 +39,39 @@ Link to download dataset: https://drive.google.com/uc?export=download&id=1EyZ8IB
 Download and Unzip in the folder: big5_personality_dataset
 
 ## Data Visualization
-The code for visualizing the big 5 personality data is present inside the folder data_visualization
+data_visualization file is also uploaded
 
 ## PCA for dimensionality reduction
-The code for applying principal component analysis to identify useful features in the data is present in the folder pca
+Principal Component Analysis combines the effect of some similar variables into a Principal 
+Component column. It is a dimensionality reduction technique that focuses on creating a totally 
+new variable, or a Principal Component from all the variables through an equation to grasp most
+variation possible. 
+
+It will help us in using only a few components which take into account the most important, 
+and most varying variables instead of using all 50 variables present in the data. 
+
+We plot cumulative variance vs no. of components to see how variance changes with the number of features selected.
+![](https://drive.google.com/uc?id=1W3n8ML7HRUQkI6CdHfPSYnq67WwFD-Y6)
+ 
+From the graph we can see that 35 components capture around 90% of variance
+
  
 ## K-means Clustering
+K-means is an unsupervised clustering algorithm designed to partition unlabelled 
+data into a certain number of distinct groupings. In other words, k-means finds observations 
+that share important characteristics and classifies them together into clusters. 
+A good clustering solution is one that finds clusters such that the observations 
+within each cluster are more similar than the clusters themselves. 
+
+To identify the no. of clusters ‘K’ we visualize the elbow plot: \
+![](https://drive.google.com/uc?id=1idWTVc5H8LCWCoJfL8NoPnyt5vH-3jiW) 
+
+The marginal sum of within-cluster distances between individuals & the marginal distance between the 
+cluster centers is best at 5 clusters.
+To visualize the clusters in a 2D plot we use PCA with 2 components
+
+![](https://drive.google.com/uc?id=1OREoblVlmo3cl0YtXeWCYGn26oD5GEfa)
+
 The code to segregate the data points into clusters for classification according to the personality traits and identifying potential matches within the data is present in the folder k_means_clustering
 
 To implement all the functionalities mentioned above including the steps to test on 
